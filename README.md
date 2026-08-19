@@ -89,7 +89,13 @@ Data ingestion rentan dengan duplikasi. Saya merancang **3-Layer Deduplication S
     *   *Trade-off:* Dalam sistem produksi berskala besar, regex tidak cukup tangguh menghadapi vektor XSS modern. Kita harus menggunakan *DOM parser* lengkap seperti `sanitize-html` atau `DOMPurify`.
 
 ---
+## 6. Waktu Pengerjaan
 
+Total waktu pengerjaan sekitar 4-5 jam, dilakukan dalam 2 sesi kerja:
+- Sesi 1 (~2-3 jam): analisis brief dan seed_mentions.json, desain schema database,
+  implementasi endpoint bulk ingest beserta logika deduplikasi 3-layer.
+- Sesi 2 (~2 jam): implementasi endpoint search dan stats, penulisan tes untuk logika
+  deduplikasi & normalisasi, penulisan dan review README.
 
 ## 7. Dengan waktu satu minggu lagi, saya akan...
 
